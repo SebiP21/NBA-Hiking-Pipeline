@@ -1,0 +1,12 @@
+ipywidgets==8.1.2
+matplotlib==3.7.5
+pandas==1.5.3
+torch==2.1.2
+torchvision==0.16.2
+tqdm==4.66.4
+pymongo==4.6.3
+neo4j==5.21.0
+pyneo==0.2.0
+py2neo==2021.2.4
+apache-airflow-providers-postgres==5.13.0
+apache-airflow-providers-openlineage==1.8.0
