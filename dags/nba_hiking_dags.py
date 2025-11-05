@@ -2,26 +2,16 @@ from airflow.decorators import dag, task
 from datetime import datetime
 import os
 import re
+import numpy as np
 import pandas as pd
-from pymongo import MongoClient
-from py2neo import Graph, Node
 import matplotlib.pyplot as plt
-
-# --- Service Connection Info (from docker-compose env) ---
-MONGO_HOST = os.environ.get("MONGO_HOST", "mongo")
-NEO4J_HOST = os.environ.get("NEO4J_HOST", "neo4j")
-
-MONGO_URI = f"mongodb://{MONGO_HOST}:27017/"
-NEO4J_URI = f"bolt://{NEO4J_HOST}:7687"
-NEO4J_USER = "neo4j"
-NEO4J_PASS = "password"
 
 # --- Data Paths (inside container) ---
 RAW_DATA_PATH = '/opt/airflow/data/raw'
 GOLD_DATA_PATH = '/opt/airflow/data/gold'
-NBA_STATS_FILE = os.path.join(RAW_DATA_PATH, 'nba_stats.csv')
-TRAILS_FILE = os.path.join(RAW_DATA_PATH, 'hiking_trails.csv')
-HAZARDS_FILE = os.path.join(RAW_DATA_PATH, 'trail_hazards.csv')
+NBA_STATS_FILE = os.path.join(RAW_DATA_PATH, 'NBA_stats_data.csv')
+TRAILS_FILE = os.path.join(RAW_DATA_PATH, 'HikingTrails_TheGorge.csv')
+HAZARDS_FILE = os.path.join(RAW_DATA_PATH, 'Trail_hazards_danger.csv')
 REPORT_FILE = os.path.join(GOLD_DATA_PATH, 'player_trail_report.png')
 
 # --- Helper Functions for cleaning ---
@@ -34,166 +24,126 @@ def get_elevation(text):
     return float(match.group(1).replace(',', '')) if match else 0.0
 
 @dag(
-    dag_id='nba_hiking_compatibility_pipeline',
+    dag_id='nba_hiking_compatibility_pipeline_pandas_only',
     start_date=datetime(2023, 1, 1),
-    schedule_interval=None,
+    schedule=None,   # Airflow 2.6+ (instead of schedule_interval=None)
     catchup=False,
-    tags=['nba', 'hiking', 'mongo', 'neo4j', 'pandas'],
+    tags=['nba', 'hiking', 'pandas', 'matplotlib', 'no-db'],
 )
 def nba_hiking_elt_pipeline():
     """
-    ELT pipeline using the specified project stack:
-    1. E-L: Loads raw CSVs into MongoDB using Pandas.
-    2. T: Reads from MongoDB, transforms with Pandas, and builds a Neo4j Graph.
-    3. Report: Queries Neo4j and generates a Matplotlib plot.
+    ELT pipeline (pandas-only):
+    1) Extract & Transform: read CSVs, compute player scores & trail requirements.
+    2) Compute: determine player↔trail compatibility purely in pandas.
+    3) Report: save a bar chart of top 15 players by compatible trails.
     """
 
     @task
-    def extract_load_to_mongo():
-        """
-        E-L Step: Extracts CSVs with Pandas and loads them into MongoDB.
-        """
-        print(f"🟢 [EL] Connecting to MongoDB at {MONGO_URI}...")
-        client = MongoClient(MONGO_URI)
-        db = client.nba_hiking_db
-        
-        # Load Players
+    def extract_and_transform():
+        # Validate input files exist
+        for p in [NBA_STATS_FILE, TRAILS_FILE, HAZARDS_FILE]:
+            if not os.path.exists(p):
+                raise FileNotFoundError(f"Missing required input file: {p}")
+
+        # Read CSVs
         players_df = pd.read_csv(NBA_STATS_FILE)
-        db.bronze_players.drop()
-        db.bronze_players.insert_many(players_df.to_dict('records'))
-        print(f"✅ Loaded {len(players_df)} players")
-
-        # Load Trails
-        trails_df = pd.read_csv(TRAILS_FILE)
-        db.bronze_trails.drop()
-        db.bronze_trails.insert_many(trails_df.to_dict('records'))
-        print(f"✅ Loaded {len(trails_df)} trails")
-        
-        # Load Hazards
+        trails_df  = pd.read_csv(TRAILS_FILE)
         hazards_df = pd.read_csv(HAZARDS_FILE)
-        db.bronze_hazards.drop()
-        db.bronze_hazards.insert_many(hazards_df.to_dict('records'))
-        print(f"✅ Loaded {len(hazards_df)} hazards")
-        
-        client.close()
-        print("🎉 [EL] Task Finished.")
 
-    @task
-    def transform_mongo_to_neo4j():
-        """
-        T Step: Reads from MongoDB, transforms with Pandas, and builds the Neo4j Graph.
-        """
-        print(f"🟡 [T] Connecting to MongoDB at {MONGO_URI}...")
-        client = MongoClient(MONGO_URI)
-        db = client.nba_hiking_db
-        
-        print(f"🟡 [T] Connecting to Neo4j at {NEO4J_URI}...")
-        graph = Graph(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS))
-        
-        # 1. Read data from Mongo into Pandas DataFrames
-        players_df = pd.DataFrame(list(db.bronze_players.find()))
-        trails_df = pd.DataFrame(list(db.bronze_trails.find()))
-        hazards_df = pd.DataFrame(list(db.bronze_hazards.find()))
-        client.close()
-
-        # 2. Transform Players
-        stat_cols = ['AGE', 'GP', 'MPG', 'RPG', 'APG', 'SPG', 'BPG']
+        # --- Clean Players ---
+        stat_cols = [c for c in ['AGE','GP','MPG','RPG','APG','SPG','BPG'] if c in players_df.columns]
         for col in stat_cols:
             players_df[col] = pd.to_numeric(players_df[col], errors='coerce').fillna(0)
-            
-        players_df['endurance_score'] = players_df['MPG'] * players_df['GP']
-        players_df['strength_score'] = players_df['RPG'] + players_df['BPG']
-        players_df['agility_score'] = players_df['SPG'] + players_df['APG']
-        
-        # 3. Transform Trails
+
+        players_df['endurance_score'] = players_df.get('MPG', 0) * players_df.get('GP', 0)
+        players_df['strength_score']  = players_df.get('RPG', 0) + players_df.get('BPG', 0)
+        players_df['agility_score']   = players_df.get('SPG', 0) + players_df.get('APG', 0)
+
+        players_df['NAME'] = players_df['NAME'].astype(str).str.strip()
+        players_df = players_df[players_df['NAME'].ne('')]
+
+        # --- Clean Trails + Hazards ---
         trails_df['distance_miles'] = trails_df['Distance'].apply(get_distance)
-        trails_df['elevation_ft'] = trails_df['Elevation Gain'].apply(get_elevation)
-        hazards_df['has_falling_risk'] = pd.to_numeric(hazards_df['Falling'], errors='coerce').fillna(0)
-        
-        trails_df = trails_df.merge(hazards_df[['Name', 'has_falling_risk']], left_on='Trail Name', right_on='Name', how='left')
-        
+        trails_df['elevation_ft']   = trails_df['Elevation Gain'].apply(get_elevation)
+
+        # Robust hazard flag mapping
+        hazards_df['has_falling_risk'] = (
+            hazards_df['Falling'].astype(str).str.strip().str.lower()
+            .map({'yes':1,'y':1,'true':1,'1':1}).fillna(0).astype(int)
+        )
+
+        trails_df = trails_df.merge(
+            hazards_df[['Name','has_falling_risk']],
+            left_on='Trail Name', right_on='Name', how='left'
+        ).drop(columns=['Name'])
+
+        # Requirements
         trails_df['endurance_req'] = (trails_df['distance_miles'] * 50) + (trails_df['elevation_ft'] * 0.1)
-        trails_df['agility_req'] = trails_df['has_falling_risk'].apply(lambda x: 5 if x == 1 else 0)
+        trails_df['agility_req']   = np.where(trails_df['has_falling_risk'] > 0, 5, 0)
 
-        # 4. Load Graph into Neo4j
-        print("🟡 [T] Loading transformed data into Neo4j...")
-        graph.run("MATCH (n) DETACH DELETE n") # Clear old graph
-        tx = graph.begin()
-        
-        # Create Player Nodes
-        for _, row in players_df.iterrows():
-            if row['NAME']:
-                node = Node("Player",
-                            name=row['NAME'],
-                            endurance=row['endurance_score'],
-                            strength=row['strength_score'],
-                            agility=row['agility_score'])
-                tx.create(node)
-        
-        # Create Trail Nodes
-        for _, row in trails_df.iterrows():
-            if row['Trail Name']:
-                node = Node("Trail",
-                            name=row['Trail Name'],
-                            difficulty=row['Difficulty'],
-                            distance=row['distance_miles'],
-                            elevation=row['elevation_ft'],
-                            endurance_req=row['endurance_req'],
-                            agility_req=row['agility_req'])
-                tx.create(node)
-        tx.commit()
+        # Normalize difficulty for comparison
+        trails_df['difficulty_norm'] = trails_df['Difficulty'].astype(str).str.strip().str.lower()
 
-        # 5. Build Relationships
-        print("🟡 [T] Building [:CAN_HIKE] relationships...")
-        graph.run("""
-            MATCH (p:Player), (t:Trail)
-            WHERE p.endurance > t.endurance_req
-              AND p.agility > t.agility_req
-              AND (CASE 
-                    WHEN t.difficulty = 'Difficult' THEN p.strength > 10
-                    WHEN t.difficulty = 'Moderate' THEN p.strength > 5
-                    ELSE TRUE 
-                   END)
-            MERGE (p)-[:CAN_HIKE]->(t)
-        """)
-        
-        print("🎉 [T] Transformations Finished.")
+        # Keep compact projections for XCom
+        players = players_df[['NAME','endurance_score','strength_score','agility_score']].copy()
+        trails  = trails_df[['Trail Name','endurance_req','agility_req','difficulty_norm']].copy()
+
+        return {
+            "players": players.to_dict('records'),
+            "trails": trails.to_dict('records')
+        }
 
     @task
-    def query_neo4j_and_save_plot():
-        """
-        Report Step: Queries Neo4j for the final report
-        and generates a Matplotlib plot.
-        """
-        print("📊 [Report] Querying Neo4j for report...")
-        graph = Graph(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS))
-        
-        result_df = graph.run("""
-            MATCH (p:Player)-[:CAN_HIKE]->(t:Trail)
-            RETURN p.name AS player_name, count(t) AS compatible_trails_count
-            ORDER BY compatible_trails_count DESC
-            LIMIT 15
-        """).to_data_frame()
-        
+    def compute_compatibility(data):
+        players = pd.DataFrame(data['players'])
+        trails  = pd.DataFrame(data['trails'])
+
+        # Cartesian join (OK for small/medium data)
+        players['_k'] = 1
+        trails['_k']  = 1
+        pairs = players.merge(trails, on='_k').drop(columns=['_k'])
+
+        # Base compatibility
+        cond_base = (pairs['endurance_score'] > pairs['endurance_req']) & (pairs['agility_score'] > pairs['agility_req'])
+
+        # Difficulty thresholds
+        diff = pairs['difficulty_norm']
+        cond_diff = np.where(
+            diff.eq('difficult'), pairs['strength_score'] > 10,
+            np.where(diff.eq('moderate'), pairs['strength_score'] > 5, True)
+        )
+
+        compatible = pairs[cond_base & cond_diff]
+
+        # Aggregate trails per player
+        summary = (compatible.groupby('NAME')['Trail Name']
+                   .nunique()
+                   .reset_index(name='compatible_trails_count')
+                   .sort_values('compatible_trails_count', ascending=False))
+
+        top15 = summary.head(15)
+        return top15.to_dict('records')
+
+    @task
+    def save_plot(top_records):
+        result_df = pd.DataFrame(top_records)
         if result_df.empty:
-            print("❌ No compatibility matches found. Stopping report.")
+            print("❌ No compatibility matches found. Skipping plot.")
             return
 
-        print(f"📊 [Report] Generating Matplotlib plot at {REPORT_FILE}...")
         os.makedirs(GOLD_DATA_PATH, exist_ok=True)
-        
         plt.figure(figsize=(12, 8))
-        plt.barh(result_df['player_name'], result_df['compatible_trails_count'], color='skyblue')
+        plt.barh(result_df['NAME'], result_df['compatible_trails_count'])
         plt.xlabel('Number of Compatible Trails')
         plt.ylabel('NBA Player')
         plt.title('Top 15 NBA Players by Hiking Trail Compatibility')
-        plt.gca().invert_yaxis() # Show top player at the top
+        plt.gca().invert_yaxis()
         plt.tight_layout()
         plt.savefig(REPORT_FILE)
-        
         print(f"✅ Report plot saved to {REPORT_FILE}")
 
-    # Define pipeline dependencies
-    extract_load_to_mongo() >> transform_mongo_to_neo4j() >> query_neo4j_and_save_plot()
+    data = extract_and_transform()
+    top  = compute_compatibility(data)
+    save_plot(top)
 
 nba_hiking_elt_pipeline()
