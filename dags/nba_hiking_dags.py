@@ -5,6 +5,7 @@ import re
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from airflow.providers.postgres.operators.postgres import PostgresOperator  # <-- added
 
 # --- Data Paths (inside container) ---
 RAW_DATA_PATH = '/opt/airflow/data/raw'
@@ -29,6 +30,7 @@ def get_elevation(text):
     schedule=None,   # Airflow 2.6+ (instead of schedule_interval=None)
     catchup=False,
     tags=['nba', 'hiking', 'pandas', 'matplotlib', 'no-db'],
+    template_searchpath=['/opt/airflow/sql']  # <-- added so Jinja can find SQL templates
 )
 def nba_hiking_elt_pipeline():
     """
@@ -142,8 +144,33 @@ def nba_hiking_elt_pipeline():
         plt.savefig(REPORT_FILE)
         print(f"✅ Report plot saved to {REPORT_FILE}")
 
+    # --- create staging tables in Postgres before the pandas flow (SQL now resolved via template_searchpath) ---
+    create_nba_stats_table = PostgresOperator(
+        task_id='create_nba_stats_table',
+        postgres_conn_id='postgres_default',
+        sql='create_nba_stats_table.sql',
+        autocommit=True,
+    )
+
+    create_hiking_trails_table = PostgresOperator(
+        task_id='create_hiking_trails_table',
+        postgres_conn_id='postgres_default',
+        sql='create_hiking_trails_table.sql',
+        autocommit=True,
+    )
+
+    create_trail_hazards_table = PostgresOperator(
+        task_id='create_trail_hazards_table',
+        postgres_conn_id='postgres_default',
+        sql='create_trail_hazards_table.sql',
+        autocommit=True,
+    )
+
     data = extract_and_transform()
     top  = compute_compatibility(data)
     save_plot(top)
+
+    # ensure tables are created first
+    [create_nba_stats_table, create_hiking_trails_table, create_trail_hazards_table] >> data
 
 nba_hiking_elt_pipeline()
