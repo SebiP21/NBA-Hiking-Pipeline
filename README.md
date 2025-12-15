@@ -4,7 +4,7 @@
 | Student name | GitHub profile |
 | :--- | :--- |
 | Sebastian Pica | [\[Profile Link\]](https://github.com/SebiP21) |
-| Luis | [Profile Link] |
+| Luis Schwarz | [Profile Link](https://github.com/lsvbs) |
 
 # Project Description
 
