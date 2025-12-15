@@ -1,0 +1,43 @@
+[2025-12-15T14:11:08.246+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-15T14:11:08.275+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_hiking_compatibility_pipeline_pandas_only.create_hiking_trails_table manual__2025-12-15T14:11:05.460178+00:00 [queued]>
+[2025-12-15T14:11:08.288+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_hiking_compatibility_pipeline_pandas_only.create_hiking_trails_table manual__2025-12-15T14:11:05.460178+00:00 [queued]>
+[2025-12-15T14:11:08.290+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-12-15T14:11:08.318+0000] {taskinstance.py:2890} INFO - Executing <Task(PostgresOperator): create_hiking_trails_table> on 2025-12-15 14:11:05.460178+00:00
+[2025-12-15T14:11:08.335+0000] {standard_task_runner.py:72} INFO - Started process 273 to run task
+[2025-12-15T14:11:08.349+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'nba_hiking_compatibility_pipeline_pandas_only', 'create_hiking_trails_table', 'manual__2025-12-15T14:11:05.460178+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/nba_hiking_dags.py', '--cfg-path', '/tmp/tmp4sfowd78']
+[2025-12-15T14:11:08.356+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask create_hiking_trails_table
+[2025-12-15T14:11:08.538+0000] {task_command.py:467} INFO - Running <TaskInstance: nba_hiking_compatibility_pipeline_pandas_only.create_hiking_trails_table manual__2025-12-15T14:11:05.460178+00:00 [running]> on host 3e12606bdde1
+[2025-12-15T14:11:08.992+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_hiking_compatibility_pipeline_pandas_only' AIRFLOW_CTX_TASK_ID='create_hiking_trails_table' AIRFLOW_CTX_EXECUTION_DATE='2025-12-15T14:11:05.460178+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-15T14:11:05.460178+00:00'
+[2025-12-15T14:11:08.994+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-12-15T14:11:08.998+0000] {sql.py:266} INFO - Executing: CREATE TABLE IF NOT EXISTS hiking_trails_thegorge_raw (
+  "Trail Name"        TEXT,
+  "Trail Type"        TEXT,
+  "Distance"          TEXT,
+  "High Point"        TEXT,
+  "Elevation Gain"    TEXT,
+  "Difficulty"        TEXT,
+  "Seasons"           TEXT,
+  "Family Friendly"   TEXT,
+  "Backpackable"      TEXT,
+  "Crowded"           TEXT
+);
+[2025-12-15T14:11:09.002+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-12-15T14:11:09.004+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-12-15T14:11:09.006+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-12-15T14:11:09.014+0000] {sql.py:542} INFO - Running statement: CREATE TABLE IF NOT EXISTS hiking_trails_thegorge_raw (
+  "Trail Name"        TEXT,
+  "Trail Type"        TEXT,
+  "Distance"          TEXT,
+  "High Point"        TEXT,
+  "Elevation Gain"    TEXT,
+  "Difficulty"        TEXT,
+  "Seasons"           TEXT,
+  "Family Friendly"   TEXT,
+  "Backpackable"      TEXT,
+  "Crowded"           TEXT
+);, parameters: None
+[2025-12-15T14:11:09.051+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-12-15T14:11:09.054+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=nba_hiking_compatibility_pipeline_pandas_only, task_id=create_hiking_trails_table, run_id=manual__2025-12-15T14:11:05.460178+00:00, execution_date=20251215T141105, start_date=20251215T141108, end_date=20251215T141109
+[2025-12-15T14:11:09.126+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-15T14:11:09.171+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-15T14:11:09.175+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

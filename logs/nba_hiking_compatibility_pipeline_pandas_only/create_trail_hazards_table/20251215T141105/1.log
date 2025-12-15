@@ -1,0 +1,33 @@
+[2025-12-15T14:11:08.239+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-15T14:11:08.264+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_hiking_compatibility_pipeline_pandas_only.create_trail_hazards_table manual__2025-12-15T14:11:05.460178+00:00 [queued]>
+[2025-12-15T14:11:08.282+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_hiking_compatibility_pipeline_pandas_only.create_trail_hazards_table manual__2025-12-15T14:11:05.460178+00:00 [queued]>
+[2025-12-15T14:11:08.282+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-12-15T14:11:08.312+0000] {taskinstance.py:2890} INFO - Executing <Task(PostgresOperator): create_trail_hazards_table> on 2025-12-15 14:11:05.460178+00:00
+[2025-12-15T14:11:08.329+0000] {standard_task_runner.py:72} INFO - Started process 272 to run task
+[2025-12-15T14:11:08.344+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'nba_hiking_compatibility_pipeline_pandas_only', 'create_trail_hazards_table', 'manual__2025-12-15T14:11:05.460178+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/nba_hiking_dags.py', '--cfg-path', '/tmp/tmp2rrtxfzv']
+[2025-12-15T14:11:08.355+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask create_trail_hazards_table
+[2025-12-15T14:11:08.537+0000] {task_command.py:467} INFO - Running <TaskInstance: nba_hiking_compatibility_pipeline_pandas_only.create_trail_hazards_table manual__2025-12-15T14:11:05.460178+00:00 [running]> on host 3e12606bdde1
+[2025-12-15T14:11:08.991+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_hiking_compatibility_pipeline_pandas_only' AIRFLOW_CTX_TASK_ID='create_trail_hazards_table' AIRFLOW_CTX_EXECUTION_DATE='2025-12-15T14:11:05.460178+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-15T14:11:05.460178+00:00'
+[2025-12-15T14:11:08.993+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-12-15T14:11:08.997+0000] {sql.py:266} INFO - Executing: CREATE TABLE IF NOT EXISTS trail_hazards_danger_raw (
+  "Name"          TEXT PRIMARY KEY,
+  "Rattlesnakes"  TEXT,
+  "Ticks"         TEXT,
+  "Posionivy"     TEXT,   -- (spelling kept to match CSV header)
+  "Falling"       TEXT
+);
+[2025-12-15T14:11:08.999+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-12-15T14:11:09.002+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-12-15T14:11:09.005+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-12-15T14:11:09.013+0000] {sql.py:542} INFO - Running statement: CREATE TABLE IF NOT EXISTS trail_hazards_danger_raw (
+  "Name"          TEXT PRIMARY KEY,
+  "Rattlesnakes"  TEXT,
+  "Ticks"         TEXT,
+  "Posionivy"     TEXT,   -- (spelling kept to match CSV header)
+  "Falling"       TEXT
+);, parameters: None
+[2025-12-15T14:11:09.065+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-12-15T14:11:09.070+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=nba_hiking_compatibility_pipeline_pandas_only, task_id=create_trail_hazards_table, run_id=manual__2025-12-15T14:11:05.460178+00:00, execution_date=20251215T141105, start_date=20251215T141108, end_date=20251215T141109
+[2025-12-15T14:11:09.169+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-15T14:11:09.202+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-15T14:11:09.206+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

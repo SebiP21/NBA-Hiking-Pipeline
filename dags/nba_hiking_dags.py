@@ -5,7 +5,8 @@ import re
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from airflow.providers.postgres.operators.postgres import PostgresOperator  # <-- added
+from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 # --- Data Paths (inside container) ---
 RAW_DATA_PATH = '/opt/airflow/data/raw'
@@ -30,15 +31,47 @@ def get_elevation(text):
     schedule=None,   # Airflow 2.6+ (instead of schedule_interval=None)
     catchup=False,
     tags=['nba', 'hiking', 'pandas', 'matplotlib', 'no-db'],
-    template_searchpath=['/opt/airflow/sql']  # <-- added so Jinja can find SQL templates
+    template_searchpath=['/opt/airflow/sql']
 )
 def nba_hiking_elt_pipeline():
     """
     ELT pipeline (pandas-only):
-    1) Extract & Transform: read CSVs, compute player scores & trail requirements.
-    2) Compute: determine player↔trail compatibility purely in pandas.
-    3) Report: save a bar chart of top 15 players by compatible trails.
+    1) Create Tables: Initialize Postgres tables using SQL files.
+    2) Load Raw Data: Populate Postgres tables from CSVs (so they appear in pgAdmin).
+    3) Extract & Transform: Read CSVs, compute player scores & trail requirements.
+    4) Compute: Determine player↔trail compatibility.
+    5) Report: Save a bar chart of top 15 players.
     """
+
+    @task
+    def load_raw_csvs_to_postgres():
+        """
+        Reads the raw CSV files and writes them into the Postgres tables 
+        created by the PostgresOperator tasks.
+        """
+        # Mapping: CSV File -> Postgres Table Name
+        files_to_tables = {
+            NBA_STATS_FILE: 'nba_stats_data_raw',
+            TRAILS_FILE: 'hiking_trails_thegorge_raw',
+            HAZARDS_FILE: 'trail_hazards_danger_raw'
+        }
+
+        pg_hook = PostgresHook(postgres_conn_id='postgres_default')
+        engine = pg_hook.get_sqlalchemy_engine()
+
+        for file_path, table_name in files_to_tables.items():
+            if os.path.exists(file_path):
+                print(f"Loading {file_path} into {table_name}...")
+                df = pd.read_csv(file_path)
+                
+                # We use if_exists='replace' to ensure the table is populated with 
+                # the correct dataframe schema matching the CSV content.
+                # If you strictly want to use the SQL schema, change to if_exists='append'
+                # but ensure columns match perfectly.
+                df.to_sql(table_name, con=engine, if_exists='replace', index=False)
+                print(f"Successfully loaded {len(df)} rows into {table_name}.")
+            else:
+                print(f"Warning: File {file_path} not found.")
 
     @task
     def extract_and_transform():
@@ -144,7 +177,7 @@ def nba_hiking_elt_pipeline():
         plt.savefig(REPORT_FILE)
         print(f"✅ Report plot saved to {REPORT_FILE}")
 
-    # --- create staging tables in Postgres before the pandas flow (SQL now resolved via template_searchpath) ---
+    # --- create staging tables in Postgres ---
     create_nba_stats_table = PostgresOperator(
         task_id='create_nba_stats_table',
         postgres_conn_id='postgres_default',
@@ -166,11 +199,20 @@ def nba_hiking_elt_pipeline():
         autocommit=True,
     )
 
-    data = extract_and_transform()
-    top  = compute_compatibility(data)
-    save_plot(top)
-
-    # ensure tables are created first
-    [create_nba_stats_table, create_hiking_trails_table, create_trail_hazards_table] >> data
+    # --- Define Task Flow ---
+    # 1. Create tables
+    # 2. Load CSV data into tables (new step)
+    # 3. Process data for the report
+    
+    tables_created = [create_nba_stats_table, create_hiking_trails_table, create_trail_hazards_table]
+    
+    data_loaded = load_raw_csvs_to_postgres()
+    
+    processed_data = extract_and_transform()
+    top_hikers = compute_compatibility(processed_data)
+    
+    # Ensure tables are created -> then load data -> then run analytics
+    tables_created >> data_loaded >> processed_data
+    save_plot(top_hikers)
 
 nba_hiking_elt_pipeline()
