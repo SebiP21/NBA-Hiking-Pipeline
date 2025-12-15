@@ -1,0 +1,71 @@
+[2025-12-15T13:41:59.180+0000] {processor.py:186} INFO - Started process (PID=224) to work on /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:41:59.182+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_hiking_dags.py for tasks to queue
+[2025-12-15T13:41:59.184+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:41:59.184+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:42:00.214+0000] {processor.py:925} INFO - DAG(s) 'nba_hiking_compatibility_pipeline_pandas_only' retrieved from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:42:00.535+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.533+0000] {override.py:1901} INFO - Created Permission View: can read on DAG:nba_hiking_compatibility_pipeline_pandas_only
+[2025-12-15T13:42:00.554+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.554+0000] {override.py:1901} INFO - Created Permission View: can delete on DAG:nba_hiking_compatibility_pipeline_pandas_only
+[2025-12-15T13:42:00.569+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.568+0000] {override.py:1901} INFO - Created Permission View: can edit on DAG:nba_hiking_compatibility_pipeline_pandas_only
+[2025-12-15T13:42:00.585+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.584+0000] {override.py:1901} INFO - Created Permission View: can create on DAG Run:nba_hiking_compatibility_pipeline_pandas_only
+[2025-12-15T13:42:00.599+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.599+0000] {override.py:1901} INFO - Created Permission View: can read on DAG Run:nba_hiking_compatibility_pipeline_pandas_only
+[2025-12-15T13:42:00.613+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.613+0000] {override.py:1901} INFO - Created Permission View: can delete on DAG Run:nba_hiking_compatibility_pipeline_pandas_only
+[2025-12-15T13:42:00.626+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.626+0000] {override.py:1901} INFO - Created Permission View: menu access on DAG Run:nba_hiking_compatibility_pipeline_pandas_only
+[2025-12-15T13:42:00.628+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.628+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T13:42:00.645+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.644+0000] {dag.py:3262} INFO - Creating ORM DAG for nba_hiking_compatibility_pipeline_pandas_only
+[2025-12-15T13:42:00.646+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:00.646+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_hiking_compatibility_pipeline_pandas_only to None, run_after=None
+[2025-12-15T13:42:00.680+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_hiking_dags.py took 1.517 seconds
+[2025-12-15T13:42:31.065+0000] {processor.py:186} INFO - Started process (PID=242) to work on /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:42:31.067+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_hiking_dags.py for tasks to queue
+[2025-12-15T13:42:31.069+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:31.068+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:42:31.805+0000] {processor.py:925} INFO - DAG(s) 'nba_hiking_compatibility_pipeline_pandas_only' retrieved from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:42:31.838+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:31.838+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T13:42:32.048+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:42:32.048+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_hiking_compatibility_pipeline_pandas_only to None, run_after=None
+[2025-12-15T13:42:32.075+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_hiking_dags.py took 1.020 seconds
+[2025-12-15T13:43:02.607+0000] {processor.py:186} INFO - Started process (PID=260) to work on /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:43:02.608+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_hiking_dags.py for tasks to queue
+[2025-12-15T13:43:02.611+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:43:02.610+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:43:03.323+0000] {processor.py:925} INFO - DAG(s) 'nba_hiking_compatibility_pipeline_pandas_only' retrieved from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:43:03.367+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:43:03.367+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T13:43:03.388+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:43:03.388+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_hiking_compatibility_pipeline_pandas_only to None, run_after=None
+[2025-12-15T13:43:03.429+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_hiking_dags.py took 0.834 seconds
+[2025-12-15T13:43:33.793+0000] {processor.py:186} INFO - Started process (PID=278) to work on /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:43:33.795+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_hiking_dags.py for tasks to queue
+[2025-12-15T13:43:33.797+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:43:33.797+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:43:34.566+0000] {processor.py:925} INFO - DAG(s) 'nba_hiking_compatibility_pipeline_pandas_only' retrieved from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:43:34.791+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:43:34.790+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T13:43:34.814+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:43:34.814+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_hiking_compatibility_pipeline_pandas_only to None, run_after=None
+[2025-12-15T13:43:34.881+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_hiking_dags.py took 1.102 seconds
+[2025-12-15T13:44:05.647+0000] {processor.py:186} INFO - Started process (PID=335) to work on /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:44:05.652+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_hiking_dags.py for tasks to queue
+[2025-12-15T13:44:05.658+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:44:05.657+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:44:06.535+0000] {processor.py:925} INFO - DAG(s) 'nba_hiking_compatibility_pipeline_pandas_only' retrieved from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:44:06.579+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:44:06.578+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T13:44:06.863+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:44:06.863+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_hiking_compatibility_pipeline_pandas_only to None, run_after=None
+[2025-12-15T13:44:06.932+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_hiking_dags.py took 1.305 seconds
+[2025-12-15T13:44:37.396+0000] {processor.py:186} INFO - Started process (PID=374) to work on /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:44:37.397+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_hiking_dags.py for tasks to queue
+[2025-12-15T13:44:37.400+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:44:37.400+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:44:38.530+0000] {processor.py:925} INFO - DAG(s) 'nba_hiking_compatibility_pipeline_pandas_only' retrieved from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:44:39.024+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:44:39.023+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T13:44:39.047+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:44:39.047+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_hiking_compatibility_pipeline_pandas_only to None, run_after=None
+[2025-12-15T13:44:39.124+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_hiking_dags.py took 1.737 seconds
+[2025-12-15T13:45:10.163+0000] {processor.py:186} INFO - Started process (PID=394) to work on /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:45:10.165+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_hiking_dags.py for tasks to queue
+[2025-12-15T13:45:10.167+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:45:10.167+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:45:11.247+0000] {processor.py:925} INFO - DAG(s) 'nba_hiking_compatibility_pipeline_pandas_only' retrieved from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:45:11.281+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:45:11.280+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T13:45:11.499+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:45:11.499+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_hiking_compatibility_pipeline_pandas_only to None, run_after=None
+[2025-12-15T13:45:11.534+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_hiking_dags.py took 1.380 seconds
+[2025-12-15T13:45:42.446+0000] {processor.py:186} INFO - Started process (PID=412) to work on /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:45:42.448+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_hiking_dags.py for tasks to queue
+[2025-12-15T13:45:42.451+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:45:42.450+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:45:43.696+0000] {processor.py:925} INFO - DAG(s) 'nba_hiking_compatibility_pipeline_pandas_only' retrieved from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:45:43.761+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:45:43.760+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T13:45:43.780+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:45:43.780+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_hiking_compatibility_pipeline_pandas_only to None, run_after=None
+[2025-12-15T13:45:43.806+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_hiking_dags.py took 1.374 seconds
+[2025-12-15T13:46:14.034+0000] {processor.py:186} INFO - Started process (PID=453) to work on /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:46:14.036+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_hiking_dags.py for tasks to queue
+[2025-12-15T13:46:14.040+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:46:14.040+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:46:15.012+0000] {processor.py:925} INFO - DAG(s) 'nba_hiking_compatibility_pipeline_pandas_only' retrieved from /opt/airflow/dags/nba_hiking_dags.py
+[2025-12-15T13:46:15.058+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:46:15.057+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T13:46:15.342+0000] {logging_mixin.py:190} INFO - [2025-12-15T13:46:15.342+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_hiking_compatibility_pipeline_pandas_only to None, run_after=None
+[2025-12-15T13:46:15.417+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_hiking_dags.py took 1.394 seconds

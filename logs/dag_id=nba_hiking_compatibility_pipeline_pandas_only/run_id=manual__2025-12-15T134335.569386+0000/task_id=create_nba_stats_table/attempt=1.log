@@ -1,0 +1,81 @@
+[2025-12-15T13:43:37.581+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-15T13:43:37.621+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nba_hiking_compatibility_pipeline_pandas_only.create_nba_stats_table manual__2025-12-15T13:43:35.569386+00:00 [queued]>
+[2025-12-15T13:43:37.638+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nba_hiking_compatibility_pipeline_pandas_only.create_nba_stats_table manual__2025-12-15T13:43:35.569386+00:00 [queued]>
+[2025-12-15T13:43:37.644+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-12-15T13:43:37.678+0000] {taskinstance.py:2890} INFO - Executing <Task(PostgresOperator): create_nba_stats_table> on 2025-12-15 13:43:35.569386+00:00
+[2025-12-15T13:43:37.694+0000] {standard_task_runner.py:72} INFO - Started process 290 to run task
+[2025-12-15T13:43:37.707+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'nba_hiking_compatibility_pipeline_pandas_only', 'create_nba_stats_table', 'manual__2025-12-15T13:43:35.569386+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/nba_hiking_dags.py', '--cfg-path', '/tmp/tmpv096ltw0']
+[2025-12-15T13:43:37.715+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask create_nba_stats_table
+[2025-12-15T13:43:37.842+0000] {task_command.py:467} INFO - Running <TaskInstance: nba_hiking_compatibility_pipeline_pandas_only.create_nba_stats_table manual__2025-12-15T13:43:35.569386+00:00 [running]> on host 0086cb95ade8
+[2025-12-15T13:43:38.290+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='nba_hiking_compatibility_pipeline_pandas_only' AIRFLOW_CTX_TASK_ID='create_nba_stats_table' AIRFLOW_CTX_EXECUTION_DATE='2025-12-15T13:43:35.569386+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-15T13:43:35.569386+00:00'
+[2025-12-15T13:43:38.292+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-12-15T13:43:38.299+0000] {sql.py:266} INFO - Executing: CREATE TABLE IF NOT EXISTS nba_stats_data_raw (
+  "RANK"   INTEGER,
+  "NAME"   TEXT,
+  "TEAM"   TEXT,
+  "POS"    TEXT,
+  "AGE"    INTEGER,
+  "GP"     INTEGER,
+  "MPG"    DOUBLE PRECISION,
+  "USG%"   DOUBLE PRECISION,
+  "TO%"    DOUBLE PRECISION,
+  "FTA"    DOUBLE PRECISION,
+  "FT%"    DOUBLE PRECISION,
+  "2PA"    DOUBLE PRECISION,
+  "2P%"    DOUBLE PRECISION,
+  "3PA"    DOUBLE PRECISION,
+  "3P%"    DOUBLE PRECISION,
+  "eFG%"   DOUBLE PRECISION,
+  "TS%"    DOUBLE PRECISION,
+  "PPG"    DOUBLE PRECISION,
+  "RPG"    DOUBLE PRECISION,
+  "APG"    DOUBLE PRECISION,
+  "SPG"    DOUBLE PRECISION,
+  "BPG"    DOUBLE PRECISION,
+  "TPG"    DOUBLE PRECISION,
+  "P+R"    DOUBLE PRECISION,
+  "P+A"    DOUBLE PRECISION,
+  "P+R+A"  DOUBLE PRECISION,
+  "VI"     DOUBLE PRECISION,
+  "ORtg"   DOUBLE PRECISION,
+  "DRtg"   DOUBLE PRECISION
+);
+[2025-12-15T13:43:38.306+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-12-15T13:43:38.308+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-12-15T13:43:38.317+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-12-15T13:43:38.329+0000] {sql.py:542} INFO - Running statement: CREATE TABLE IF NOT EXISTS nba_stats_data_raw (
+  "RANK"   INTEGER,
+  "NAME"   TEXT,
+  "TEAM"   TEXT,
+  "POS"    TEXT,
+  "AGE"    INTEGER,
+  "GP"     INTEGER,
+  "MPG"    DOUBLE PRECISION,
+  "USG%"   DOUBLE PRECISION,
+  "TO%"    DOUBLE PRECISION,
+  "FTA"    DOUBLE PRECISION,
+  "FT%"    DOUBLE PRECISION,
+  "2PA"    DOUBLE PRECISION,
+  "2P%"    DOUBLE PRECISION,
+  "3PA"    DOUBLE PRECISION,
+  "3P%"    DOUBLE PRECISION,
+  "eFG%"   DOUBLE PRECISION,
+  "TS%"    DOUBLE PRECISION,
+  "PPG"    DOUBLE PRECISION,
+  "RPG"    DOUBLE PRECISION,
+  "APG"    DOUBLE PRECISION,
+  "SPG"    DOUBLE PRECISION,
+  "BPG"    DOUBLE PRECISION,
+  "TPG"    DOUBLE PRECISION,
+  "P+R"    DOUBLE PRECISION,
+  "P+A"    DOUBLE PRECISION,
+  "P+R+A"  DOUBLE PRECISION,
+  "VI"     DOUBLE PRECISION,
+  "ORtg"   DOUBLE PRECISION,
+  "DRtg"   DOUBLE PRECISION
+);, parameters: None
+[2025-12-15T13:43:38.365+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-12-15T13:43:38.367+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=nba_hiking_compatibility_pipeline_pandas_only, task_id=create_nba_stats_table, run_id=manual__2025-12-15T13:43:35.569386+00:00, execution_date=20251215T134335, start_date=20251215T134337, end_date=20251215T134338
+[2025-12-15T13:43:38.443+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-15T13:43:38.554+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-15T13:43:38.558+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
