@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 
-# --- Data Paths (inside container) ---
+# defining the paths where our data lives inside the airflow container
 RAW_DATA_PATH = '/opt/airflow/data/raw'
 GOLD_DATA_PATH = '/opt/airflow/data/gold'
 NBA_STATS_FILE = os.path.join(RAW_DATA_PATH, 'NBA_stats_data.csv')
@@ -16,11 +16,12 @@ TRAILS_FILE = os.path.join(RAW_DATA_PATH, 'HikingTrails_TheGorge.csv')
 HAZARDS_FILE = os.path.join(RAW_DATA_PATH, 'Trail_hazards_danger.csv')
 REPORT_FILE = os.path.join(GOLD_DATA_PATH, 'player_trail_report.png')
 
-# --- Helper Functions for cleaning ---
+# helper function to extract distance as a float from the text field
 def get_distance(text):
     match = re.search(r'(\d+\.?\d*)', str(text))
     return float(match.group(1)) if match else 0.0
 
+# helper function to parse elevation, removing commas from numbers
 def get_elevation(text):
     match = re.search(r'([\d,]+)', str(text))
     return float(match.group(1).replace(',', '')) if match else 0.0
@@ -28,28 +29,28 @@ def get_elevation(text):
 @dag(
     dag_id='nba_hiking_compatibility_pipeline_pandas_only',
     start_date=datetime(2023, 1, 1),
-    schedule=None,   # Airflow 2.6+ (instead of schedule_interval=None)
+    schedule=None,
     catchup=False,
     tags=['nba', 'hiking', 'pandas', 'matplotlib', 'no-db'],
     template_searchpath=['/opt/airflow/sql']
 )
 def nba_hiking_elt_pipeline():
     """
-    ELT pipeline (pandas-only):
-    1) Create Tables: Initialize Postgres tables using SQL files.
-    2) Load Raw Data: Populate Postgres tables from CSVs (so they appear in pgAdmin).
-    3) Extract & Transform: Read CSVs, compute player scores & trail requirements.
-    4) Compute: Determine player↔trail compatibility.
-    5) Report: Save a bar chart of top 15 players.
+    ELT pipeline overview:
+    1. Initialize the Postgres tables using the SQL scripts I wrote.
+    2. Populate those tables with raw data from the CSVs so we can see it in pgAdmin.
+    3. Use Pandas to clean up the stats and calculate the 'hiking scores'.
+    4. figure out which players fit which trails.
+    5. finally, generate a chart for the top 15 players.
     """
 
     @task
     def load_raw_csvs_to_postgres():
         """
-        Reads the raw CSV files and writes them into the Postgres tables 
-        created by the PostgresOperator tasks.
+        Takes the raw CSV files and pushes them into Postgres.
+        This is mostly so we can verify the data exists in the DB tool (pgAdmin).
         """
-        # Mapping: CSV File -> Postgres Table Name
+        # mapping the csv file paths to the table names created by the sql operators
         files_to_tables = {
             NBA_STATS_FILE: 'nba_stats_data_raw',
             TRAILS_FILE: 'hiking_trails_thegorge_raw',
@@ -61,65 +62,71 @@ def nba_hiking_elt_pipeline():
 
         for file_path, table_name in files_to_tables.items():
             if os.path.exists(file_path):
-                print(f"Loading {file_path} into {table_name}...")
+                print(f"Starting load for {file_path} into {table_name}...")
                 df = pd.read_csv(file_path)
                 
-                # We use if_exists='replace' to ensure the table is populated with 
-                # the correct dataframe schema matching the CSV content.
-                # If you strictly want to use the SQL schema, change to if_exists='append'
-                # but ensure columns match perfectly.
+                # using replace here to make sure we don't duplicate data if we re-run this
+                # keeping index=False because we don't need the pandas index in the db
                 df.to_sql(table_name, con=engine, if_exists='replace', index=False)
-                print(f"Successfully loaded {len(df)} rows into {table_name}.")
+                print(f"Finished loading {len(df)} rows into {table_name}.")
             else:
-                print(f"Warning: File {file_path} not found.")
+                print(f"Warning: Could not find file {file_path}.")
 
     @task
     def extract_and_transform():
-        # Validate input files exist
+        # quick check to make sure all the necessary files are actually there
         for p in [NBA_STATS_FILE, TRAILS_FILE, HAZARDS_FILE]:
             if not os.path.exists(p):
                 raise FileNotFoundError(f"Missing required input file: {p}")
 
-        # Read CSVs
+        # reading the raw data into dataframes
         players_df = pd.read_csv(NBA_STATS_FILE)
         trails_df  = pd.read_csv(TRAILS_FILE)
         hazards_df = pd.read_csv(HAZARDS_FILE)
 
-        # --- Clean Players ---
+        # need to clean up the numeric columns in the player stats
+        # sometimes these come in as objects/strings, so coercing them to numbers
         stat_cols = [c for c in ['AGE','GP','MPG','RPG','APG','SPG','BPG'] if c in players_df.columns]
         for col in stat_cols:
             players_df[col] = pd.to_numeric(players_df[col], errors='coerce').fillna(0)
 
+        # calculating the hiking attributes based on basketball stats
+        # endurance is minutes played * games played
         players_df['endurance_score'] = players_df.get('MPG', 0) * players_df.get('GP', 0)
+        # strength combines rebounds and blocks
         players_df['strength_score']  = players_df.get('RPG', 0) + players_df.get('BPG', 0)
+        # agility is steals plus assists
         players_df['agility_score']   = players_df.get('SPG', 0) + players_df.get('APG', 0)
 
+        # cleaning up player names to avoid matching issues later
         players_df['NAME'] = players_df['NAME'].astype(str).str.strip()
         players_df = players_df[players_df['NAME'].ne('')]
 
-        # --- Clean Trails + Hazards ---
+        # parsing the trail data numbers using the helper functions
         trails_df['distance_miles'] = trails_df['Distance'].apply(get_distance)
         trails_df['elevation_ft']   = trails_df['Elevation Gain'].apply(get_elevation)
 
-        # Robust hazard flag mapping
+        # normalizing the hazard data - converting 'yes'/'y'/'true' to 1 for easier math
         hazards_df['has_falling_risk'] = (
             hazards_df['Falling'].astype(str).str.strip().str.lower()
             .map({'yes':1,'y':1,'true':1,'1':1}).fillna(0).astype(int)
         )
 
+        # joining hazards to trails so we know which trails are dangerous
         trails_df = trails_df.merge(
             hazards_df[['Name','has_falling_risk']],
             left_on='Trail Name', right_on='Name', how='left'
         ).drop(columns=['Name'])
 
-        # Requirements
+        # calculating what the trails require from a hiker
         trails_df['endurance_req'] = (trails_df['distance_miles'] * 50) + (trails_df['elevation_ft'] * 0.1)
+        # if there is a falling risk, we set a high agility requirement
         trails_df['agility_req']   = np.where(trails_df['has_falling_risk'] > 0, 5, 0)
 
-        # Normalize difficulty for comparison
+        # normalizing the difficulty string so we can filter on it easily
         trails_df['difficulty_norm'] = trails_df['Difficulty'].astype(str).str.strip().str.lower()
 
-        # Keep compact projections for XCom
+        # keeping only the columns we actually need for the compatibility logic
         players = players_df[['NAME','endurance_score','strength_score','agility_score']].copy()
         trails  = trails_df[['Trail Name','endurance_req','agility_req','difficulty_norm']].copy()
 
@@ -133,15 +140,16 @@ def nba_hiking_elt_pipeline():
         players = pd.DataFrame(data['players'])
         trails  = pd.DataFrame(data['trails'])
 
-        # Cartesian join (OK for small/medium data)
+        # doing a cross join here to compare every player against every trail
+        # this creates a lot of rows but it's fine for this dataset size
         players['_k'] = 1
         trails['_k']  = 1
         pairs = players.merge(trails, on='_k').drop(columns=['_k'])
 
-        # Base compatibility
+        # checking if player stats meet the trail requirements
         cond_base = (pairs['endurance_score'] > pairs['endurance_req']) & (pairs['agility_score'] > pairs['agility_req'])
 
-        # Difficulty thresholds
+        # checking difficulty: tough trails need more strength
         diff = pairs['difficulty_norm']
         cond_diff = np.where(
             diff.eq('difficult'), pairs['strength_score'] > 10,
@@ -150,12 +158,13 @@ def nba_hiking_elt_pipeline():
 
         compatible = pairs[cond_base & cond_diff]
 
-        # Aggregate trails per player
+        # counting how many trails each player can hike
         summary = (compatible.groupby('NAME')['Trail Name']
                    .nunique()
                    .reset_index(name='compatible_trails_count')
                    .sort_values('compatible_trails_count', ascending=False))
 
+        # just taking the top 15 for the report
         top15 = summary.head(15)
         return top15.to_dict('records')
 
@@ -163,10 +172,13 @@ def nba_hiking_elt_pipeline():
     def save_plot(top_records):
         result_df = pd.DataFrame(top_records)
         if result_df.empty:
-            print("❌ No compatibility matches found. Skipping plot.")
+            print("No compatibility matches found. Skipping plot.")
             return
 
+        # ensuring the output directory exists before saving
         os.makedirs(GOLD_DATA_PATH, exist_ok=True)
+        
+        # plotting the results
         plt.figure(figsize=(12, 8))
         plt.barh(result_df['NAME'], result_df['compatible_trails_count'])
         plt.xlabel('Number of Compatible Trails')
@@ -175,9 +187,9 @@ def nba_hiking_elt_pipeline():
         plt.gca().invert_yaxis()
         plt.tight_layout()
         plt.savefig(REPORT_FILE)
-        print(f"✅ Report plot saved to {REPORT_FILE}")
+        print(f"Report plot saved to {REPORT_FILE}")
 
-    # --- create staging tables in Postgres ---
+    # creating the empty tables in postgres using the SQL files
     create_nba_stats_table = PostgresOperator(
         task_id='create_nba_stats_table',
         postgres_conn_id='postgres_default',
@@ -199,10 +211,8 @@ def nba_hiking_elt_pipeline():
         autocommit=True,
     )
 
-    # --- Define Task Flow ---
-    # 1. Create tables
-    # 2. Load CSV data into tables (new step)
-    # 3. Process data for the report
+    # defining the execution order
+    # 1. create schema -> 2. load raw csv data -> 3. process logic
     
     tables_created = [create_nba_stats_table, create_hiking_trails_table, create_trail_hazards_table]
     
@@ -211,7 +221,6 @@ def nba_hiking_elt_pipeline():
     processed_data = extract_and_transform()
     top_hikers = compute_compatibility(processed_data)
     
-    # Ensure tables are created -> then load data -> then run analytics
     tables_created >> data_loaded >> processed_data
     save_plot(top_hikers)
 
