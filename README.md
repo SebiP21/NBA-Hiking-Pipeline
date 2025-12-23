@@ -5,6 +5,7 @@
 | :--- | :--- |
 | Sebastian Pica | [\[Profile Link\]](https://github.com/SebiP21) |
 | Luis Schwarz | [Profile Link](https://github.com/lsvbs) |
+| Shuyan Dou | [Profile Link](https://github.com/shuyanDou) |
 
 # Project Description
 
@@ -26,6 +27,11 @@ Project report available [here](docs/Report.md)
 - [x] slides for the project presentation.
 
 ## Data Sources:
+We have obtained the csvs used for the pipeline from the following websites:
+
+- [](https://www.nbastuffer.com/2024-2025-nba-player-stats)
+- [](https://www.kaggle.com/datasets/chuckh193333/hiking-trails-columbia-river-gorge)
+
 The data used in this project is stored locally in the `data/raw` folder, consisting of:
 - **NBA Stats**: Performance metrics for players (GP, MPG, Rebounds, etc.).
 - **Hiking Trails**: Distance, elevation gain, and difficulty ratings for trails in The Gorge.
