@@ -3,7 +3,7 @@
 
 | Student name | GitHub profile |
 | :--- | :--- |
-| Sebastian Pica | [\[Profile Link\]](https://github.com/SebiP21) |
+| Sebastian Pica | [[Profile Link]](https://github.com/SebiP21) |
 | Luis Schwarz | [Profile Link](https://github.com/lsvbs) |
 | Shuyan Dou | [Profile Link](https://github.com/shuyanDou) |
 
