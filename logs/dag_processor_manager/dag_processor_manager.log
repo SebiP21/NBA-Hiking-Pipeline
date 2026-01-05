@@ -583,3 +583,680 @@ File Path                                PID  Runtime      # DAGs    # Errors  L
 /opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.22s           2025-12-15T14:12:39                      10
 /opt/airflow/dags/nba_hiking_dags.py     425  0.01s             1           0  1.05s           2025-12-15T14:12:39                      10
 ================================================================================
+[2025-12-15T14:13:41.135+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.56s           2025-12-15T14:13:11                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.53s           2025-12-15T14:13:11                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.00s           2025-12-15T14:13:12                      10
+================================================================================
+[2025-12-15T14:14:13.831+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py     461  0.04s             1           0  1.22s           2025-12-15T14:13:43                      10
+/opt/airflow/dags/rookie_hiker_dag.py    464  0.01s             1           0  1.16s           2025-12-15T14:13:43                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.07s           2025-12-15T14:13:44                      10
+================================================================================
+[2025-12-15T14:14:44.880+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.11s           2025-12-15T14:14:14                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.09s           2025-12-15T14:14:15                      10
+/opt/airflow/dags/rookie_hiker_dag.py    479  0.01s             1           0  0.87s           2025-12-15T14:14:14                      10
+================================================================================
+[2025-12-15T14:15:00.577+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-12-15T14:15:00.678+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-15T14:15:16.994+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py    500  0.01s             1           0  1.19s           2025-12-15T14:14:46                      10
+/opt/airflow/dags/nba_hiking_dags.py     497  0.03s             1           0  1.15s           2025-12-15T14:14:46                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.04s           2025-12-15T14:14:47                      10
+================================================================================
+[2025-12-15T14:15:48.928+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py     515  0.03s             1           0  1.21s           2025-12-15T14:15:18                      10
+/opt/airflow/dags/rookie_hiker_dag.py    518  0.01s             1           0  1.18s           2025-12-15T14:15:18                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.06s           2025-12-15T14:15:19                      10
+================================================================================
+[2025-12-15T14:16:20.766+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py     533  0.04s             1           0  1.26s           2025-12-15T14:15:50                      10
+/opt/airflow/dags/rookie_hiker_dag.py    536  0.01s             1           0  1.21s           2025-12-15T14:15:50                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  0.98s           2025-12-15T14:15:51                      10
+================================================================================
+[2025-12-15T14:16:52.239+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.34s           2025-12-15T14:16:23                      10
+/opt/airflow/dags/nba_hiking_dags.py     551  0.05s             1           0  1.33s           2025-12-15T14:16:22                      10
+/opt/airflow/dags/rookie_hiker_dag.py    554  0.01s             1           0  1.23s           2025-12-15T14:16:21                      10
+================================================================================
+[2025-12-15T14:17:24.476+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py     569  0.03s             1           0  1.45s           2025-12-15T14:16:53                      10
+/opt/airflow/dags/rookie_hiker_dag.py    572  0.01s             1           0  1.39s           2025-12-15T14:16:53                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.13s           2025-12-15T14:16:54                      10
+================================================================================
+[2025-12-15T14:17:56.385+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py     587  0.04s             1           0  1.23s           2025-12-15T14:17:25                      10
+/opt/airflow/dags/rookie_hiker_dag.py    590  0.01s             1           0  1.18s           2025-12-15T14:17:25                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.00s           2025-12-15T14:17:26                      10
+================================================================================
+[2025-12-15T14:18:28.575+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py     605  0.03s             1           0  1.35s           2025-12-15T14:17:57                      10
+/opt/airflow/dags/rookie_hiker_dag.py    608  0.01s             1           0  1.32s           2025-12-15T14:17:57                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.15s           2025-12-15T14:17:58                      10
+================================================================================
+[2025-12-15T14:19:00.594+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py     623  0.03s             1           0  1.18s           2025-12-15T14:18:29                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.13s           2025-12-15T14:18:30                      10
+/opt/airflow/dags/rookie_hiker_dag.py    626  0.01s             1           0  1.11s           2025-12-15T14:18:29                      10
+================================================================================
+[2025-12-15T14:19:31.931+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.29s           2025-12-15T14:19:03                      10
+/opt/airflow/dags/nba_hiking_dags.py     641  0.03s             1           0  1.24s           2025-12-15T14:19:01                      10
+/opt/airflow/dags/rookie_hiker_dag.py    644  0.01s             1           0  1.22s           2025-12-15T14:19:01                      10
+================================================================================
+[2025-12-15T14:20:00.878+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-12-15T14:20:00.955+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-15T14:20:04.056+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py     659  0.02s             1           0  1.28s           2025-12-15T14:19:33                      10
+/opt/airflow/dags/rookie_hiker_dag.py    662  0.01s             1           0  1.23s           2025-12-15T14:19:33                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.13s           2025-12-15T14:19:34                      10
+================================================================================
+[2025-12-15T14:20:35.397+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py    680  0.01s             1           0  1.25s           2025-12-15T14:20:05                      10
+/opt/airflow/dags/nba_hiking_dags.py     677  0.03s             1           0  1.24s           2025-12-15T14:20:05                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.13s           2025-12-15T14:20:06                      10
+================================================================================
+[2025-12-15T14:21:06.849+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.53s           2025-12-15T14:20:36                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.49s           2025-12-15T14:20:36                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.18s           2025-12-15T14:20:38                      10
+================================================================================
+[2025-12-15T14:21:38.823+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.24s           2025-12-15T14:21:09                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.24s           2025-12-15T14:21:08                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.14s           2025-12-15T14:21:10                      10
+================================================================================
+[2025-12-15T14:22:10.845+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.17s           2025-12-15T14:21:41                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.10s           2025-12-15T14:21:40                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.07s           2025-12-15T14:21:42                      10
+================================================================================
+[2025-12-15T14:22:42.237+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.67s           2025-12-15T14:22:15                      32
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.28s           2025-12-15T14:22:13                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.24s           2025-12-15T14:22:14                      10
+================================================================================
+[2025-12-15T14:23:13.857+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.48s           2025-12-15T14:23:07                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.44s           2025-12-15T14:23:10                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.20s           2025-12-15T14:22:47                      10
+================================================================================
+[2025-12-15T14:23:45.308+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.80s           2025-12-15T14:23:19                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.25s           2025-12-15T14:23:42                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.19s           2025-12-15T14:23:38                      10
+================================================================================
+[2025-12-15T14:24:17.056+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  2.49s           2025-12-15T14:23:52                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.27s           2025-12-15T14:24:11                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.08s           2025-12-15T14:24:14                      10
+================================================================================
+[2025-12-15T14:24:48.516+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.53s           2025-12-15T14:24:43                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.40s           2025-12-15T14:24:45                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.18s           2025-12-15T14:24:24                      10
+================================================================================
+[2025-12-15T14:25:01.081+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-12-15T14:25:01.201+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-15T14:25:20.020+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.43s           2025-12-15T14:25:17                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.31s           2025-12-15T14:24:56                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.03s           2025-12-15T14:25:14                      10
+================================================================================
+[2025-12-15T14:25:52.190+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.31s           2025-12-15T14:25:27                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.23s           2025-12-15T14:25:46                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.20s           2025-12-15T14:25:49                      10
+================================================================================
+[2025-12-15T14:26:24.402+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.41s           2025-12-15T14:26:00                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.25s           2025-12-15T14:26:21                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.16s           2025-12-15T14:26:17                      10
+================================================================================
+[2025-12-15T14:26:56.469+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.26s           2025-12-15T14:26:53                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.12s           2025-12-15T14:26:49                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.07s           2025-12-15T14:26:31                      10
+================================================================================
+[2025-12-15T14:27:27.926+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.27s           2025-12-15T14:27:20                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.25s           2025-12-15T14:27:03                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.18s           2025-12-15T14:27:24                      10
+================================================================================
+[2025-12-15T14:27:59.684+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.22s           2025-12-15T14:27:56                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.12s           2025-12-15T14:27:52                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.12s           2025-12-15T14:27:35                      10
+================================================================================
+[2025-12-15T14:28:31.182+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.37s           2025-12-15T14:28:07                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.17s           2025-12-15T14:28:28                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.13s           2025-12-15T14:28:23                      10
+================================================================================
+[2025-12-15T14:29:03.442+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.34s           2025-12-15T14:28:55                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.16s           2025-12-15T14:28:38                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.09s           2025-12-15T14:28:59                      10
+================================================================================
+[2025-12-15T14:29:37.008+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.27s           2025-12-15T14:29:10                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.11s           2025-12-15T14:29:26                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.10s           2025-12-15T14:29:30                      10
+================================================================================
+[2025-12-15T14:30:01.593+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-12-15T14:30:01.684+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-15T14:30:08.458+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.23s           2025-12-15T14:30:02                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.20s           2025-12-15T14:29:42                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.17s           2025-12-15T14:29:58                      10
+================================================================================
+[2025-12-15T14:30:40.524+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.32s           2025-12-15T14:30:13                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.22s           2025-12-15T14:30:34                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.12s           2025-12-15T14:30:29                      10
+================================================================================
+[2025-12-15T14:31:11.990+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.24s           2025-12-15T14:31:01                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.22s           2025-12-15T14:31:05                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.11s           2025-12-15T14:30:44                      10
+================================================================================
+[2025-12-15T14:31:44.021+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.24s           2025-12-15T14:31:16                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.22s           2025-12-15T14:31:37                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.16s           2025-12-15T14:31:32                      10
+================================================================================
+[2025-12-15T14:32:15.594+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.56s           2025-12-15T14:32:09                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.37s           2025-12-15T14:32:04                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.32s           2025-12-15T14:31:48                      10
+================================================================================
+[2025-12-15T14:32:47.393+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.41s           2025-12-15T14:32:36                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.35s           2025-12-15T14:32:40                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.05s           2025-12-15T14:32:19                      10
+================================================================================
+[2025-12-15T14:33:19.087+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.36s           2025-12-15T14:32:51                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.29s           2025-12-15T14:33:12                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.14s           2025-12-15T14:33:07                      10
+================================================================================
+[2025-12-15T14:33:51.135+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.29s           2025-12-15T14:33:44                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.15s           2025-12-15T14:33:23                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.14s           2025-12-15T14:33:39                      10
+================================================================================
+[2025-12-15T14:34:22.533+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.57s           2025-12-15T14:34:11                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.37s           2025-12-15T14:34:16                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.17s           2025-12-15T14:33:54                      10
+================================================================================
+[2025-12-15T14:34:54.252+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.39s           2025-12-15T14:34:26                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.09s           2025-12-15T14:34:47                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.06s           2025-12-15T14:34:42                      10
+================================================================================
+[2025-12-15T14:35:01.677+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-12-15T14:35:01.749+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-15T14:35:25.684+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.28s           2025-12-15T14:35:14                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.28s           2025-12-15T14:34:57                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.17s           2025-12-15T14:35:19                      10
+================================================================================
+[2025-12-15T14:35:57.807+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.29s           2025-12-15T14:35:46                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.26s           2025-12-15T14:35:28                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.03s           2025-12-15T14:35:50                      10
+================================================================================
+[2025-12-15T14:36:29.325+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.28s           2025-12-15T14:36:01                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.28s           2025-12-15T14:36:21                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.13s           2025-12-15T14:36:17                      10
+================================================================================
+[2025-12-15T14:37:01.358+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.30s           2025-12-15T14:36:54                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.29s           2025-12-15T14:36:32                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.08s           2025-12-15T14:36:48                      10
+================================================================================
+[2025-12-15T14:37:32.821+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.39s           2025-12-15T14:37:25                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.33s           2025-12-15T14:37:20                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.27s           2025-12-15T14:37:03                      10
+================================================================================
+[2025-12-15T14:38:04.262+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.37s           2025-12-15T14:37:35                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.15s           2025-12-15T14:37:56                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.14s           2025-12-15T14:37:51                      10
+================================================================================
+[2025-12-15T14:38:35.875+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  2.10s           2025-12-15T14:38:29                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.53s           2025-12-15T14:38:23                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.25s           2025-12-15T14:38:07                      10
+================================================================================
+[2025-12-15T14:39:08.032+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  2.50s           2025-12-15T14:39:02                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.31s           2025-12-15T14:38:54                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.14s           2025-12-15T14:38:39                      10
+================================================================================
+[2025-12-15T14:39:39.442+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.29s           2025-12-15T14:39:26                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.24s           2025-12-15T14:39:34                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.24s           2025-12-15T14:39:10                      10
+================================================================================
+[2025-12-15T14:40:01.778+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-12-15T14:40:01.838+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-15T14:40:11.394+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.17s           2025-12-15T14:40:06                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.15s           2025-12-15T14:39:58                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.04s           2025-12-15T14:39:41                      10
+================================================================================
+[2025-12-15T14:40:42.888+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.43s           2025-12-15T14:40:38                      10
+/opt/airflow/dags/nba_hiking_dags.py    1379  0.01s             1           0  1.09s           2025-12-15T14:40:12                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.09s           2025-12-15T14:40:30                      10
+================================================================================
+[2025-12-15T14:41:14.863+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py    1397  0.01s             1           0  1.22s           2025-12-15T14:40:44                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.12s           2025-12-15T14:41:10                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.07s           2025-12-15T14:41:02                      10
+================================================================================
+[2025-12-15T14:41:46.884+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.20s           2025-12-15T14:41:42                      10
+/opt/airflow/dags/nba_hiking_dags.py    1415  0.01s             1           0  1.18s           2025-12-15T14:41:16                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.09s           2025-12-15T14:41:34                      10
+================================================================================
+[2025-12-15T14:42:18.865+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.19s           2025-12-15T14:42:14                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.12s           2025-12-15T14:42:06                      10
+/opt/airflow/dags/nba_hiking_dags.py    1433  0.84s             1           0  1.11s           2025-12-15T14:41:47                      10
+================================================================================
+[2025-12-15T14:42:50.991+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.10s           2025-12-15T14:42:46                      10
+/opt/airflow/dags/nba_hiking_dags.py    1451  1.02s             1           0  1.04s           2025-12-15T14:42:19                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.04s           2025-12-15T14:42:37                      10
+================================================================================
+[2025-12-15T14:43:22.995+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.14s           2025-12-15T14:43:19                      10
+/opt/airflow/dags/nba_hiking_dags.py    1469  1.02s             1           0  1.09s           2025-12-15T14:42:51                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.07s           2025-12-15T14:43:09                      10
+================================================================================
+[2025-12-15T14:43:54.820+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.09s           2025-12-15T14:43:50                      10
+/opt/airflow/dags/nba_hiking_dags.py    1487  1.02s             1           0  1.06s           2025-12-15T14:43:23                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.02s           2025-12-15T14:43:41                      10
+================================================================================
+[2025-12-15T14:44:26.864+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.14s           2025-12-15T14:44:13                      10
+/opt/airflow/dags/nba_hiking_dags.py    1505  1.02s             1           0  1.11s           2025-12-15T14:43:54                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.11s           2025-12-15T14:44:22                      10
+================================================================================
+[2025-12-15T14:44:58.859+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py    1523  1.02s             1           0  1.18s           2025-12-15T14:44:27                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.17s           2025-12-15T14:44:54                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.06s           2025-12-15T14:44:45                      10
+================================================================================
+[2025-12-15T14:45:01.896+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-12-15T14:45:01.997+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-15T14:45:31.115+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  2.46s           2025-12-15T14:45:18                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.17s           2025-12-15T14:45:27                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.10s           2025-12-15T14:45:30                      10
+================================================================================
+[2025-12-15T14:46:03.362+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.18s           2025-12-15T14:45:58                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.13s           2025-12-15T14:46:01                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.09s           2025-12-15T14:45:50                      10
+================================================================================
+[2025-12-15T14:46:35.528+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.19s           2025-12-15T14:46:23                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.08s           2025-12-15T14:46:29                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.05s           2025-12-15T14:46:32                      10
+================================================================================
+[2025-12-15T14:47:07.498+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.19s           2025-12-15T14:47:04                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.09s           2025-12-15T14:47:01                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.04s           2025-12-15T14:46:55                      10
+================================================================================
+[2025-12-15T14:47:39.229+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/nba_teams_dag.py                              1           0  1.15s           2025-12-15T14:47:26                      10
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  1.02s           2025-12-15T14:47:32                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  0.80s           2025-12-15T14:47:36                      10
+================================================================================
+[2025-12-15T17:04:15.714+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-12-15T17:04:17.420+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-15T17:04:45.603+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/rookie_hiker_dag.py                           1           0  2.17s           2025-12-15T17:04:19                      10
+/opt/airflow/dags/nba_teams_dag.py                              1           0  2.05s           2025-12-15T17:04:19                      10
+/opt/airflow/dags/nba_hiking_dags.py                            1           0  1.01s           2025-12-15T17:04:20                      10
+================================================================================
+[2025-12-15T17:04:49.344+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15

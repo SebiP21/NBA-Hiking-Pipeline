@@ -737,3 +737,136 @@
 [2025-12-15T14:37:56.827+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:37:56.827+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-12-15T14:37:56.843+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:37:56.843+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
 [2025-12-15T14:37:56.900+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.097 seconds
+[2025-12-15T14:38:27.407+0000] {processor.py:186} INFO - Started process (PID=1301) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:38:27.410+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:38:27.413+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:27.412+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:38:28.653+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:38:28.713+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:28.712+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:38:28.737+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:28.737+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:38:29.425+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.410 seconds
+[2025-12-15T14:38:59.555+0000] {processor.py:186} INFO - Started process (PID=1319) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:38:59.557+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:38:59.559+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:59.559+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:39:01.889+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:39:01.917+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:01.916+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:39:01.935+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:01.935+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:39:01.990+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.036 seconds
+[2025-12-15T14:39:33.174+0000] {processor.py:186} INFO - Started process (PID=1337) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:39:33.176+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:39:33.178+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:33.178+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:39:34.267+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:39:34.296+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:34.296+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:39:34.312+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:34.312+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:39:34.343+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.180 seconds
+[2025-12-15T14:40:05.314+0000] {processor.py:186} INFO - Started process (PID=1355) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:40:05.316+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:40:05.318+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:40:05.318+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:40:06.303+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:40:06.338+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:40:06.337+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:40:06.357+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:40:06.357+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:40:06.420+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.114 seconds
+[2025-12-15T14:40:37.397+0000] {processor.py:186} INFO - Started process (PID=1373) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:40:37.399+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:40:37.401+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:40:37.401+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:40:38.651+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:40:38.682+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:40:38.681+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:40:38.702+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:40:38.701+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:40:38.760+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.369 seconds
+[2025-12-15T14:41:09.802+0000] {processor.py:186} INFO - Started process (PID=1391) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:41:09.804+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:41:09.806+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:09.806+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:41:10.730+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:41:10.761+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:10.760+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:41:10.778+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:10.778+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:41:10.840+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.047 seconds
+[2025-12-15T14:41:41.807+0000] {processor.py:186} INFO - Started process (PID=1409) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:41:41.809+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:41:41.813+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:41.812+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:41:42.803+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:41:42.840+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:42.840+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:41:42.858+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:42.858+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:41:42.940+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.144 seconds
+[2025-12-15T14:42:13.798+0000] {processor.py:186} INFO - Started process (PID=1427) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:42:13.799+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:42:13.801+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:13.801+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:42:14.806+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:42:14.835+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:14.834+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:42:14.852+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:14.852+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:42:14.919+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.129 seconds
+[2025-12-15T14:42:45.907+0000] {processor.py:186} INFO - Started process (PID=1445) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:42:45.909+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:42:45.911+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:45.911+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:42:46.866+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:42:46.899+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:46.898+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:42:46.916+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:46.916+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:42:46.944+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.044 seconds
+[2025-12-15T14:43:17.930+0000] {processor.py:186} INFO - Started process (PID=1463) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:43:17.931+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:43:17.933+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:17.933+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:43:18.892+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:43:18.931+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:18.930+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:43:18.947+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:18.946+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:43:19.007+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.085 seconds
+[2025-12-15T14:43:49.736+0000] {processor.py:186} INFO - Started process (PID=1481) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:43:49.738+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:43:49.740+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:49.740+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:43:50.651+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:43:50.688+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:50.687+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:43:50.706+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:50.706+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:43:50.769+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.041 seconds
+[2025-12-15T14:44:21.722+0000] {processor.py:186} INFO - Started process (PID=1499) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:44:21.724+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:44:21.726+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:21.726+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:44:22.648+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:44:22.680+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:22.678+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:44:22.698+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:22.698+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:44:22.760+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.045 seconds
+[2025-12-15T14:44:53.766+0000] {processor.py:186} INFO - Started process (PID=1517) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:44:53.768+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:44:53.771+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:53.770+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:44:54.750+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:44:54.784+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:54.783+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:44:54.800+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:54.800+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:44:54.863+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.110 seconds
+[2025-12-15T14:45:25.900+0000] {processor.py:186} INFO - Started process (PID=1535) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:45:25.902+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:45:25.904+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:25.904+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:45:26.880+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:45:26.914+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:26.913+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:45:26.932+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:26.932+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:45:26.997+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.105 seconds
+[2025-12-15T14:45:57.125+0000] {processor.py:186} INFO - Started process (PID=1553) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:45:57.127+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:45:57.131+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:57.130+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:45:58.130+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:45:58.160+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:58.159+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:45:58.184+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:58.184+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:45:58.221+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.110 seconds
+[2025-12-15T14:46:28.373+0000] {processor.py:186} INFO - Started process (PID=1571) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:46:28.375+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:46:28.377+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:46:28.376+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:46:29.292+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:46:29.319+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:46:29.318+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:46:29.333+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:46:29.333+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:46:29.389+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.023 seconds
+[2025-12-15T14:47:00.348+0000] {processor.py:186} INFO - Started process (PID=1589) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:47:00.349+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:47:00.351+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:47:00.351+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:47:01.310+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:47:01.340+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:47:01.339+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:47:01.357+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:47:01.357+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:47:01.381+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.042 seconds
+[2025-12-15T14:47:31.555+0000] {processor.py:186} INFO - Started process (PID=1607) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:47:31.556+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T14:47:31.558+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:47:31.557+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:47:32.399+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T14:47:32.434+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:47:32.433+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:47:32.452+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:47:32.452+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T14:47:32.505+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 0.959 seconds
+[2025-12-15T17:04:17.733+0000] {processor.py:186} INFO - Started process (PID=1621) to work on /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T17:04:17.740+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rookie_hiker_dag.py for tasks to queue
+[2025-12-15T17:04:17.750+0000] {logging_mixin.py:190} INFO - [2025-12-15T17:04:17.748+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T17:04:19.556+0000] {processor.py:925} INFO - DAG(s) 'rookie_hiker_dag' retrieved from /opt/airflow/dags/rookie_hiker_dag.py
+[2025-12-15T17:04:19.605+0000] {logging_mixin.py:190} INFO - [2025-12-15T17:04:19.604+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T17:04:19.634+0000] {logging_mixin.py:190} INFO - [2025-12-15T17:04:19.634+0000] {dag.py:4180} INFO - Setting next_dagrun for rookie_hiker_dag to None, run_after=None
+[2025-12-15T17:04:19.680+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rookie_hiker_dag.py took 1.985 seconds

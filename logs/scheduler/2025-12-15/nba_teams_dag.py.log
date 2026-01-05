@@ -743,3 +743,136 @@
 [2025-12-15T14:37:51.564+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:37:51.563+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-12-15T14:37:51.579+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:37:51.578+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
 [2025-12-15T14:37:51.635+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.084 seconds
+[2025-12-15T14:38:21.744+0000] {processor.py:186} INFO - Started process (PID=1295) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:38:21.746+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:38:21.749+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:21.748+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:38:23.061+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:38:23.111+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:23.110+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:38:23.134+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:23.133+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:38:23.200+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.470 seconds
+[2025-12-15T14:38:53.428+0000] {processor.py:186} INFO - Started process (PID=1313) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:38:53.430+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:38:53.436+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:53.433+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:38:54.527+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:38:54.570+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:54.570+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:38:54.592+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:38:54.591+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:38:54.656+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.240 seconds
+[2025-12-15T14:39:25.463+0000] {processor.py:186} INFO - Started process (PID=1331) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:39:25.464+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:39:25.468+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:25.467+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:39:26.554+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:39:26.591+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:26.590+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:39:26.616+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:26.615+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:39:26.683+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.229 seconds
+[2025-12-15T14:39:57.739+0000] {processor.py:186} INFO - Started process (PID=1349) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:39:57.767+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:39:57.772+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:57.771+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:39:58.717+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:39:58.752+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:58.751+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:39:58.768+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:39:58.768+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:39:58.825+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.095 seconds
+[2025-12-15T14:40:29.870+0000] {processor.py:186} INFO - Started process (PID=1367) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:40:29.872+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:40:29.873+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:40:29.873+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:40:30.799+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:40:30.831+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:40:30.830+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:40:30.850+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:40:30.850+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:40:30.884+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.025 seconds
+[2025-12-15T14:41:01.256+0000] {processor.py:186} INFO - Started process (PID=1385) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:41:01.259+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:41:01.261+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:01.261+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:41:02.155+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:41:02.197+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:02.196+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:41:02.213+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:02.213+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:41:02.241+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 0.994 seconds
+[2025-12-15T14:41:33.262+0000] {processor.py:186} INFO - Started process (PID=1403) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:41:33.264+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:41:33.266+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:33.266+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:41:34.183+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:41:34.211+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:34.210+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:41:34.227+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:41:34.226+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:41:34.287+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.035 seconds
+[2025-12-15T14:42:05.238+0000] {processor.py:186} INFO - Started process (PID=1421) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:42:05.240+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:42:05.242+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:05.241+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:42:06.188+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:42:06.218+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:06.218+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:42:06.235+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:06.234+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:42:06.287+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.057 seconds
+[2025-12-15T14:42:36.379+0000] {processor.py:186} INFO - Started process (PID=1439) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:42:36.381+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:42:36.383+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:36.382+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:42:37.275+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:42:37.304+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:37.304+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:42:37.320+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:42:37.320+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:42:37.351+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 0.980 seconds
+[2025-12-15T14:43:08.348+0000] {processor.py:186} INFO - Started process (PID=1457) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:43:08.349+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:43:08.351+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:08.351+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:43:09.279+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:43:09.314+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:09.313+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:43:09.331+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:09.331+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:43:09.364+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.025 seconds
+[2025-12-15T14:43:40.256+0000] {processor.py:186} INFO - Started process (PID=1475) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:43:40.258+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:43:40.259+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:40.259+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:43:41.144+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:43:41.173+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:41.172+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:43:41.195+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:43:41.195+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:43:41.217+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 0.968 seconds
+[2025-12-15T14:44:12.166+0000] {processor.py:186} INFO - Started process (PID=1493) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:44:12.168+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:44:12.171+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:12.171+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:44:13.137+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:44:13.168+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:13.168+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:44:13.185+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:13.184+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:44:13.243+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.084 seconds
+[2025-12-15T14:44:44.246+0000] {processor.py:186} INFO - Started process (PID=1511) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:44:44.248+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:44:44.250+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:44.250+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:44:45.150+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:44:45.180+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:45.179+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:44:45.221+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:44:45.221+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:44:45.243+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.005 seconds
+[2025-12-15T14:45:16.319+0000] {processor.py:186} INFO - Started process (PID=1529) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:45:16.321+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:45:16.324+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:16.323+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:45:18.639+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:45:18.672+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:18.670+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:45:18.691+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:18.690+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:45:18.718+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.014 seconds
+[2025-12-15T14:45:49.896+0000] {processor.py:186} INFO - Started process (PID=1547) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:45:49.898+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:45:49.901+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:49.900+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:45:50.819+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:45:50.847+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:50.847+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:45:50.866+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:45:50.865+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:45:50.921+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.033 seconds
+[2025-12-15T14:46:22.073+0000] {processor.py:186} INFO - Started process (PID=1565) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:46:22.075+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:46:22.077+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:46:22.077+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:46:23.084+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:46:23.117+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:46:23.116+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:46:23.137+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:46:23.137+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:46:23.198+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.136 seconds
+[2025-12-15T14:46:54.241+0000] {processor.py:186} INFO - Started process (PID=1583) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:46:54.243+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:46:54.246+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:46:54.245+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:46:55.108+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:46:55.136+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:46:55.135+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:46:55.152+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:46:55.152+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:46:55.209+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 0.981 seconds
+[2025-12-15T14:47:25.320+0000] {processor.py:186} INFO - Started process (PID=1601) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:47:25.322+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T14:47:25.324+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:47:25.323+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:47:26.323+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T14:47:26.354+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:47:26.353+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T14:47:26.380+0000] {logging_mixin.py:190} INFO - [2025-12-15T14:47:26.380+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T14:47:26.408+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.099 seconds
+[2025-12-15T17:04:17.782+0000] {processor.py:186} INFO - Started process (PID=1624) to work on /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T17:04:17.787+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/nba_teams_dag.py for tasks to queue
+[2025-12-15T17:04:17.792+0000] {logging_mixin.py:190} INFO - [2025-12-15T17:04:17.791+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T17:04:19.563+0000] {processor.py:925} INFO - DAG(s) 'nba_teams_dag' retrieved from /opt/airflow/dags/nba_teams_dag.py
+[2025-12-15T17:04:19.605+0000] {logging_mixin.py:190} INFO - [2025-12-15T17:04:19.604+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-15T17:04:19.636+0000] {logging_mixin.py:190} INFO - [2025-12-15T17:04:19.636+0000] {dag.py:4180} INFO - Setting next_dagrun for nba_teams_dag to None, run_after=None
+[2025-12-15T17:04:19.680+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/nba_teams_dag.py took 1.935 seconds
