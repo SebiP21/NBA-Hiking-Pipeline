@@ -29,8 +29,8 @@ Project report available [here](docs/Report.md)
 ## Data Sources:
 We have obtained the csvs used for the pipeline from the following websites:
 
-- [](https://www.nbastuffer.com/2024-2025-nba-player-stats)
-- [](https://www.kaggle.com/datasets/chuckh193333/hiking-trails-columbia-river-gorge)
+- [NBA Stuffer - Player Stats](https://www.nbastuffer.com/2024-2025-nba-player-stats)
+- [Kaggle - Hiking Trails Columbia River Gorge](https://www.kaggle.com/datasets/chuckh193333/hiking-trails-columbia-river-gorge)
 
 The data used in this project is stored locally in the `data/raw` folder, consisting of:
 - **NBA Stats**: Performance metrics for players (GP, MPG, Rebounds, etc.).
@@ -38,6 +38,18 @@ The data used in this project is stored locally in the `data/raw` folder, consis
 - **Trail Hazards**: Specific danger flags (Falling risks, etc.) for specific trails.
 
 # Development info
+
+## Pipeline Architecture
+The project is built on a containerized ELT (Extract, Load, Transform) architecture. **Apache Airflow** orchestrates the flow of data from raw CSV files into a **PostgreSQL** data warehouse, using **Pandas** for complex transformations and scoring logic.
+
+![Pipeline Diagram](images/PipelineDiagram.png)
+
+### Available DAGs
+The pipeline is split into three modular DAGs to handle specific analytical questions:
+1. **`nba_hiking_compatibility_pipeline_pandas_only`**: The main pipeline. It ingests the raw CSVs, performs the cleaning and scoring transformation, and generates the general "Top 15 Hikers" report.
+2. **`rookie_hiker_dag`**: A targeted analysis that filters specifically for the 2022-2023 Rookie class to find the best young hikers.
+3. **`nba_teams_dag`**: An aggregation pipeline that groups compatibility scores by NBA Team to identify the fittest rosters.
+
 ## Getting started
 
 1. Ensure you have Docker installed and running.
